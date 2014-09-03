@@ -5,6 +5,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.1.5'
 # Use sqlite3 as the database for Active Record
 group :development do
+	gem 'debugger'
   gem 'sqlite3', '1.3.8'
 end
 # Use SCSS for stylesheets
@@ -40,4 +41,4 @@ gem 'spring',        group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
+gem 'rspec-rails', '3.0.2'
