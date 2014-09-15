@@ -35,6 +35,8 @@ gem 'spring',        group: :development
 # Use unicorn as the app server
 # gem 'unicorn'
 
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
