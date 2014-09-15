@@ -1,0 +1,9 @@
+Semana 3/9 - 9/9
+O que eu deveria ter feito:
+	Criar aplicação Rails, cadastrar um usuário e criar eventos com datas e hora
+
+O que eu fiz:
+	Criei aplicação Rails e criei o cadastro de usuário
+
+O que eu devo fazer essa semana:
+	Criar eventos com datas e horas e implementar um calendário
