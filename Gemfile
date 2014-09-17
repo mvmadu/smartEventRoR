@@ -5,7 +5,6 @@ source 'https://rubygems.org'
 gem 'rails', '4.1.5'
 # Use sqlite3 as the database for Active Record
 group :development do
-	gem 'debugger'
   gem 'sqlite3', '1.3.8'
 end
 # Use SCSS for stylesheets
@@ -35,6 +34,8 @@ gem 'spring',        group: :development
 
 # Use unicorn as the app server
 # gem 'unicorn'
+
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
