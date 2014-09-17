@@ -1,9 +1,9 @@
-Semana 3/9 - 9/9
+Semana 10/9 - 17/9
 O que eu deveria ter feito:
-	Criar aplicação Rails, cadastrar um usuário e criar eventos com datas e hora
-
+	Deveria ter feito upload de imagens e ter acesso a uma agenda	
+	
 O que eu fiz:
-	Criei aplicação Rails e criei o cadastro de usuário
+	Corrigi o problema no tzinfo
 
 O que eu devo fazer essa semana:
-	Criar eventos com datas e horas e implementar um calendário
+	Upload de imagens e ter acesso a agenda
