@@ -27,6 +27,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     respond_to do |format|
+      debugger
       if @user.password == @user.confirm_password 
         if @user.save
           format.html { redirect_to @user, notice: 'User was successfully created.' }
