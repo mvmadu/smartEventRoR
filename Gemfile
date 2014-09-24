@@ -9,6 +9,7 @@ group :development do
 end
 # Use SCSS for stylesheets
 gem 'bootstrap-sass', '~> 3.2.0'
+gem 'sprockets', '2.11.0'
 gem 'sass-rails', '4.0.3'
 gem 'autoprefixer-rails'
 # Use Uglifier as compressor for JavaScript assets

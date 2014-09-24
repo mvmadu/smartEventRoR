@@ -1,5 +1,11 @@
 <h1>Listing events</h1>
 
+<!--<script>
+    $("#calendar").fullCalendar({
+        events: '/events.json'
+    });
+</script>-->
+
 <table>
   <thead>
     <tr>
@@ -27,5 +33,14 @@
 </table>
 
 <br>
-
 <%= link_to 'New Event', new_event_path %>
+<br>
+<h1>FullCalendar</h1>
+
+<link rel='stylesheet' href='fullcalendar/fullcalendar.css' />
+<script src='lib/jquery.min.js'></script>
+<script src='lib/moment.min.js'></script>
+<script src='fullcalendar/fullcalendar.js'></script>
+
+<!--<div id='calendar'></div>-->
+
