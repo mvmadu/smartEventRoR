@@ -1,3 +1,14 @@
+Semana 17/9 - 23/9
+O que eu deveria ter feito:
+	Upload de imagens e ter acesso a agenda	
+	
+O que eu fiz:
+	Implementei o bootstrap
+
+O que eu devo fazer essa semana:
+	Corrigir o erro do programa, ter acesso a agenda e fazer o upload de imagens
+____________________________________________________________
+
 Semana 10/9 - 16/9
 O que eu deveria ter feito:
 	Deveria ter feito upload de imagens e ter acesso a uma agenda	
