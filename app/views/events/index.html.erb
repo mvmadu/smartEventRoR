@@ -1,15 +1,29 @@
 <h1>FullCalendar</h1>
 
+<div id="mudaissodepoissemfalta">
+	<div id='calendar'>
+	</div>
+</div>
+
+<style>
+	#mudaissodepoissemfalta {
+		width: 70%;
+	}
+</style>
+
 <script>
-	$('#calendar').fullCalendar({
-		sditable: true,
-		weekMode: 'liquid',
-		url:'#',
-		events:'events.json'
+	$(document).ready(function(){
+		console.log(8);
+		$('#calendar').fullCalendar({
+			editable: true,
+			weekMode: 'liquid',
+			url:'#',
+			events:'/events.json'
+		});
+		console.log(15);
 	});
 </script>
 
-<div id='calendar'></div>
 
 <br>
 <%= link_to 'New Event', new_event_path %>

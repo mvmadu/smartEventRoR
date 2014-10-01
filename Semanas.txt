@@ -1,3 +1,14 @@
+Semana 23/9 - 30/9
+O que eu deveria ter feito:
+	Corrigir o erro do programa, ter acesso a agenda e fazer o upload de imagens
+	
+O que eu fiz:
+	Corrigido o erro e o fullcalendar foi implementado.
+
+O que eu devo fazer essa semana:
+	Upload de imagens
+____________________________________________________________
+
 Semana 17/9 - 23/9
 O que eu deveria ter feito:
 	Upload de imagens e ter acesso a agenda	
