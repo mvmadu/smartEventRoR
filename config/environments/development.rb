@@ -34,4 +34,11 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  #Adicionados para fazer o pipeline funcionar!!!
+  #So as to not gzip the assets
+  config.assets.compress = false
+  #To enable runtime compilation of assets
+  config.assets.compile = true
+  config.serve_static_assets = false
 end
