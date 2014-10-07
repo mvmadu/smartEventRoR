@@ -1,6 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+
+<%= image_tag @event.picture_objects.url %>
+<%= image_tag @event.picture_objects.url(:medium) %>
+<%= image_tag @event.picture_objects.url(:thumb) %>
+</p>
+<p>
   <strong>Title:</strong>
   <%= @event.title %>
 </p>
