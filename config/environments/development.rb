@@ -40,5 +40,5 @@ Rails.application.configure do
   config.assets.compress = false
   #To enable runtime compilation of assets
   config.assets.compile = true
-  config.serve_static_assets = false
+  config.serve_static_assets = true
 end

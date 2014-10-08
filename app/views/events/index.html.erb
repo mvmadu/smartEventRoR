@@ -1,26 +1,24 @@
-<h1>FullCalendar</h1>
+<h1>Calendar</h1>
 
 
 <div id='calendar'>
-	<style>
-		#calendar {
-		width: 50%;
-		}
-	</style>
 </div>
 
 
+<style>
+	#calendar {
+		width: 100%;
+		height: 70%;
+	}
+</style>
 
 <script>
 	$(document).ready(function(){
-		console.log(8);
 		$('#calendar').fullCalendar({
-			editable: true,
 			weekMode: 'liquid',
 			url:'#',
 			events:'/events.json'
 		});
-		console.log(15);
 	});
 </script>
 

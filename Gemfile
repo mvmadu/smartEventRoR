@@ -18,7 +18,8 @@ gem 'uglifier', '2.1.1'
 gem 'coffee-rails', '4.0.1'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
-gem "paperclip", "~> 4.2"
+gem 'paperclip', '~> 4.2'
+gem 'aws-sdk'
 # Use jquery as the JavaScript library
 gem 'jquery-rails', '3.0.4'
 gem 'fullcalendar-rails'
@@ -46,5 +47,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 # gem 'capistrano-rails', group: :development
 
 # Use debugger
-# gem 'debugger', group: [:development, :test]
+gem 'debugger', group: [:development, :test]
 gem 'rspec-rails', '3.0.2'
