@@ -1,3 +1,14 @@
+﻿Semana 31/9 - 7/9
+O que eu deveria ter feito:
+	Upload de imagens
+	
+O que eu fiz:
+	Upload de imagens
+
+O que eu devo fazer essa semana:
+	Consertas o pipeline, listar as fotos ao evento e marcá-las como verificada
+____________________________________________________________
+
 Semana 23/9 - 30/9
 O que eu deveria ter feito:
 	Corrigir o erro do programa, ter acesso a agenda e fazer o upload de imagens

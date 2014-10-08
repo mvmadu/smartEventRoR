@@ -1,12 +1,6 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-
-<%= image_tag @event.picture_objects.url %>
-<%= image_tag @event.picture_objects.url(:medium) %>
-<%= image_tag @event.picture_objects.url(:thumb) %>
-</p>
-<p>
   <strong>Title:</strong>
   <%= @event.title %>
 </p>
@@ -26,5 +20,10 @@
   <%= @event.description %>
 </p>
 
-<%= link_to 'Edit', edit_event_path(@event) %> |
+<p>
+<%= image_tag  @event.picture_objects.url %>
+</p>
+
+
+ <%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path %>
