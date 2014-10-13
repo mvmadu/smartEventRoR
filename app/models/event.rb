@@ -4,4 +4,5 @@ class Event < ActiveRecord::Base
     :path => ":rails_root/public/assets/events/:id/:style/:basename.:extension"
 	validates_attachment_content_type :picture_objects, :content_type => ['image/jpeg', 'image/png'] 
 
+	attr_accessible :title, :start_time, :end_time, :description, :picture_objects
 end
