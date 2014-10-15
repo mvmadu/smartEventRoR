@@ -28,6 +28,11 @@ class EventsController < ApplicationController
 
     respond_to do |format|
       if @event.save
+        if params[:images]
+          params[:images].each { |image|
+            @event.pictures.create(image: image)
+          }
+        end
         format.html { redirect_to @event, notice: 'Event was successfully created.' }
         format.json { render :show, status: :created, location: @event }
       else
@@ -42,6 +47,11 @@ class EventsController < ApplicationController
   def update
     respond_to do |format|
       if @event.update(event_params)
+        if params[:images]
+          params[:images].each { |image|
+            @event.pictures.create(image: image)
+          }
+        end
         format.html { redirect_to @event, notice: 'Event was successfully updated.' }
         format.json { render :show, status: :ok, location: @event }
       else

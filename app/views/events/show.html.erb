@@ -20,10 +20,13 @@
   <%= @event.description %>
 </p>
 
-<p>
-	<%= image_tag  @event.picture_objects.url %>
-</p>
-
+<div id= "preview_images">
+	<% @event.pictures.each do |p|%>
+		<p>
+			<%= image_tag p.image.url %>
+		</p>
+	<% end %>
+</div>
 
 <%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path %> |
