@@ -24,6 +24,7 @@
 	<% @event.pictures.each do |p|%>
 		<p>
 			<%= image_tag p.image.url %>
+			<%= link_to 'Destroy Image', "/pictures/#{p.id}/destroy", method: :delete, data: { confirm: 'Are you sure?'} %>
 		</p>
 	<% end %>
 </div>

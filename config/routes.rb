@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   resources :users
   match '/events/:id/destroy', to: 'events#destroy', via: 'get'
+  match '/pictures/:id/destroy', to: 'pictures#destroy', via: 'get'
   match '/users/:id/destroy', to: 'users#destroy', via: 'get'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
