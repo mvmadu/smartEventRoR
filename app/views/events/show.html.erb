@@ -20,14 +20,10 @@
   <%= @event.description %>
 </p>
 
-<div id= "preview_images">
-	<% @event.pictures.each do |p|%>
-		<p>
-			<%= image_tag p.image.url %>
-			<%= link_to 'Destroy Image', "/pictures/#{p.id}/destroy", method: :delete, data: { confirm: 'Are you sure?'} %>
-		</p>
-	<% end %>
-</div>
+<p>
+	<%= image_tag  @event.picture_objects.url %>
+</p>
+
 
 <%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path %> |
