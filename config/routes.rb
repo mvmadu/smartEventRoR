@@ -1,15 +1,19 @@
 Rails.application.routes.draw do
-  get 'users/new'
-
   resources :users
 
   resources :events
 
   resources :users
+
+  resources :sessions
   match '/events/:id/destroy', to: 'events#destroy', via: 'get'
   match '/pictures/:id/destroy', to: 'pictures#destroy', via: 'get'
   match '/users/:id/destroy', to: 'users#destroy', via: 'get'
-  
+  match '/logout' => 'sessions#destroy', via: 'logout'
+  match '/login' => 'sessions#new', via: 'get'
+  match '/signup' => 'users#new', via: 'signup'
+  #match "home" => 'sessions#home' via: 'home'
+  root :to => "sessions#new"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

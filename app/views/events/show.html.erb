@@ -20,9 +20,9 @@
   <%= @event.description %>
 </p>
 
-<p>
-	<%= image_tag  @event.picture_objects.url %>
-</p>
+<% @event.pictures.each do |p| %>
+	<%= image_tag  p.photo.url %><br>
+<% end %>
 
 
 <%= link_to 'Edit', edit_event_path(@event) %> |
