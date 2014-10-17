@@ -22,7 +22,7 @@ module SmartEventRoR
     
     #to enable rails' asset pipleline
     config.assets.enabled = true 
-
+    config.assets.initialize_on_precompile = false
     config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
   end
 end
