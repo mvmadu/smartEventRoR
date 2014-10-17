@@ -9,9 +9,9 @@ Rails.application.routes.draw do
   match '/events/:id/destroy', to: 'events#destroy', via: 'get'
   match '/pictures/:id/destroy', to: 'pictures#destroy', via: 'get'
   match '/users/:id/destroy', to: 'users#destroy', via: 'get'
-  match '/logout' => 'sessions#destroy', via: 'logout'
+  match '/logout' => 'sessions#destroy', via: 'get'
   match '/login' => 'sessions#new', via: 'get'
-  match '/signup' => 'users#new', via: 'signup'
+  match '/signup' => 'users#new', via: 'get'
   #match "home" => 'sessions#home' via: 'home'
   root :to => "sessions#new"
   # The priority is based upon order of creation: first created -> highest priority.

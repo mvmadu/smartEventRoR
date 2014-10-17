@@ -36,7 +36,7 @@ gem 'spring',        group: :development
 # gem 'bcrypt', '~> 3.1.7'
 gem 'protected_attributes'
 gem 'bcrypt-ruby', '3.1.2', :require => 'bcrypt'
-
+gem 'json', '~>1.8.1'
 # Use unicorn as the app server
 # gem 'unicorn'
 

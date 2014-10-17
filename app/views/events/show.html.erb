@@ -1,31 +1,33 @@
-<p id="notice"><%= notice %></p>
+<% if current_user.id == @event.user_id %>
+	<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @event.title %>
-</p>
+	<p>
+	  <strong>Title:</strong>
+	  <%= @event.title %>
+	</p>
 
-<p>
-  <strong>Start time:</strong>
-  <%= @event.start_time %>
-</p>
+	<p>
+	  <strong>Start time:</strong>
+	  <%= @event.start_time %>
+	</p>
 
-<p>
-  <strong>End time:</strong>
-  <%= @event.end_time %>
-</p>
+	<p>
+	  <strong>End time:</strong>
+	  <%= @event.end_time %>
+	</p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @event.description %>
-</p>
+	<p>
+	  <strong>Description:</strong>
+	  <%= @event.description %>
+	</p>
 
-<% @event.pictures.each do |p| %>
-	<%= image_tag  p.photo.url %><br>
+	<% @event.pictures.each do |p| %>
+		<%= image_tag  p.photo.url %><br>
+	<% end %>
+
+	<%= link_to 'Edit', edit_event_path(@event) %> |
+	<%= link_to 'Back', events_path %> |
+	<%= link_to 'Destroy', "/events/#{@event.id}/destroy", method: :delete, data: { confirm: 'Are you sure?' } %>
+<% else %>
+	<% access_denied %>
 <% end %>
-
-
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %> |
-<%= link_to 'Destroy', "/events/#{@event.id}/destroy", method: :delete, data: { confirm: 'Are you sure?' } %>
-

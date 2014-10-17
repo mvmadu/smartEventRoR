@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
-  attr_accessible :username, :email, :password, :password_confirmation
-  attr_accessor :password
+  attr_accessible :username, :email, :password, :password_confirmation, :event_attributes, :user_events
+  attr_accessor :password, :user_events
+  has_many :events, :dependent => :destroy
   validates :username, :presence => true, :uniqueness => true, :length => { :in => 3..20 }
   validates :email, :presence => true, :uniqueness => true, email_format: { message: "doesn't look like an email address" }
   validates :password, :confirmation => true #password_confirmation attr
@@ -18,7 +19,7 @@ class User < ActiveRecord::Base
   def clear_password
     self.password = nil
   end
-  
+
   def self.authenticate(username="", login_password="")
     user = User.find_by_username(username)
         

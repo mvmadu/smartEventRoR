@@ -16,12 +16,26 @@
 	$(document).ready(function(){
 		$('#calendar').fullCalendar({
 			weekMode: 'liquid',
-			url:'#',
-			events:'/events.json'
+			events: <% current_user.user_events %>
+			/*events: function(start,end, callback) {
+    			$.getJSON('/events.json', function(events){
+        			var eventsToShow = [];
+        			for(var i=0; i<events.length; i++){
+            			if(events[i].user_id == current_user.id){
+                			eventsToShow.push(events[i]);
+            			}
+        			}
+        			callback(eventsToShow);
+    			});
+			}*/
+			/*events:{
+			url: '/events.json',
+			data: { 'user_id' : <% current_user.id %> }
+			}*/
 		});
 	});
 </script>
 
-
 <br>
-<%= link_to 'New Event', new_event_path %>
+<%= link_to 'New Event', new_event_path %><br>
+<%= link_to 'Log out', "/logout"%>

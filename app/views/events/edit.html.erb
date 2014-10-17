@@ -1,6 +1,10 @@
+<% if current_user.id == @event.user_id %>
 <h1>Editing event</h1>
 
 <%= render 'form' %>
 
 <%= link_to 'Show', @event %> |
 <%= link_to 'Back', events_path %>
+<% else %>
+
+<% end %>
