@@ -7,6 +7,9 @@ gem 'rails', '4.1.5'
 group :development do
   gem 'sqlite3', '1.3.8'
 end
+group :production do
+	gem 'pg'
+end
 # Use SCSS for stylesheets
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'sprockets', '2.11.0'
