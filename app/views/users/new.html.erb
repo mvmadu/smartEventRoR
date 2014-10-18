@@ -1,3 +1,4 @@
+<% if !current_user %>
 <% @page_title = "UserAuth | Signup" %>
 <h1>Sign Up</h1>
 <%= form_for(@user) do |f| %>
@@ -32,4 +33,7 @@
   <div class="actions">
     <%= f.submit %>
   </div>
+<% end %>
+<% else %>
+  You can't create an account being logged in, click <%=link_to 'here' , "/logout" %> to log out.
 <% end %>
