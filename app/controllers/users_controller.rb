@@ -24,4 +24,12 @@ class UsersController < ApplicationController
       render "new"
     end
   end
+
+  def destroy
+    current_user.destroy
+    respond_to do |format|
+      format.html { redirect_to root_url, notice: 'User was successfully destroyed.' }
+      format.json { head :no_content }
+    end
+  end
 end
