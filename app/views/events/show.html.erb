@@ -25,9 +25,9 @@
 		<%= image_tag  p.photo.url%><br>
 	<% end %>
 
-	<%= link_to 'Edit', edit_event_path(@event) %> |
-	<%= link_to 'Back', events_path %> |
-	<%= link_to 'Destroy', "/events/#{@event.id}/destroy", method: :delete, data: { confirm: 'Are you sure?' } %>
+	<%= button_to 'Edit', edit_event_path(@event) ,  :method => :get %>
+	<%= button_to 'Back', events_path,  :method => :get  %>
+	<%= button_to 'Destroy', "/events/#{@event.id}/destroy", method: :delete, data: { confirm: 'Are you sure?' },  :method => :get  %>
 <% else %>
 	Your access to this page has been denied click <%= link_to 'here', events_path %> to be redirected.
 <% end %>

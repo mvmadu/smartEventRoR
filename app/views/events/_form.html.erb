@@ -13,7 +13,7 @@
 
   <% @event.pictures.each do |p| %>
     <%= image_tag  p.photo.url %>
-    <%= link_to 'Destroy', "/pictures/#{p.id}/destroy", method: :delete, data: { confirm: 'Are you sure?' } %><br>
+    <%= button_to 'Destroy', "/pictures/#{p.id}/destroy", method: :delete, data: { confirm: 'Are you sure?' },  :method => :get  %><br>
   <% end %>
 
   <div class="control-group">
@@ -42,6 +42,6 @@
 
   <div class="form-actions">
     <%= f.submit nil, :class => 'btn btn-primary' %>
-    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),events_path, :class => 'btn btn-mini' %>
+    <%= button_to t('.cancel', :default => t("helpers.links.cancel")),events_path, :class => 'btn btn-mini', :method => :get  %>
   </div>
 <% end %>

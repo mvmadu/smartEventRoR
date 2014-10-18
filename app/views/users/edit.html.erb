@@ -1,0 +1,7 @@
+<h1>Editing user</h1>
+
+<%= render 'new' %>
+
+<%= button_to 'Show', @user,  :method => :get  %>
+<%= button_to 'Back', users_path,  :method => :get  %>
+<%= button_to 'Destroy', "/users/#{@user.id}/destroy", method: :delete, data: { confirm: 'Are you sure?' },  :method => :get  %>

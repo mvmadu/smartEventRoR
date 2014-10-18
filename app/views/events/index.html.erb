@@ -36,5 +36,5 @@
 </script>
 
 <br>
-<%= link_to 'New Event', new_event_path %><br>
-<%= link_to 'Log out', "/logout"%>
+<%= button_to 'New Event', new_event_path,  :method => :get  %><br>
+<%= button_to 'Log out', "/logout",  :method => :get  %>
