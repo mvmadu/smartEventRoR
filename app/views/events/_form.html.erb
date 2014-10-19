@@ -42,6 +42,6 @@
 
   <div class="form-actions">
     <%= f.submit nil, :class => 'btn btn-primary' %>
-    <%= button_to t('.cancel', :default => t("helpers.links.cancel")),events_path, :class => 'btn btn-mini', :method => :get  %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),events_path, :class => 'btn btn-mini'%>
   </div>
 <% end %>
