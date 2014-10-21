@@ -1,4 +1,26 @@
-﻿Semana 31/9 - 7/9
+﻿Semana 15/10 - 22/9
+O que eu deveria ter feito:
+	Consertar o pipeline, marcar as fotos como verificadas e criar login para os usuarios
+	
+O que eu fiz:
+	Criar login para os usuarios
+
+O que eu devo fazer essa semana:
+	Consertar o pipeline, marcar as fotos como verificadas e tornar a agenda privada
+____________________________________________________________
+
+Semana 8/10 - 15/9
+O que eu deveria ter feito:
+	Consertas o pipeline, listar as fotos ao evento e marcá-las como verificada
+	
+O que eu fiz:
+	Listar as fotos no evento e criação de usuarios
+
+O que eu devo fazer essa semana:
+	Consertar o pipeline, marcar as fotos como verificadas e criar login para os usuarios
+____________________________________________________________
+
+Semana 31/9 - 7/10
 O que eu deveria ter feito:
 	Upload de imagens
 	
