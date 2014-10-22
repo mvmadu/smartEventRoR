@@ -13,3 +13,5 @@ Funcionamento:
 	O SmartEvent funciona da seguinte maneira, o usuário adicionará os eventos no calendário, onde eles serão chamados de "eventos únicos", ou seja, só existirão na data e na hora a que foram atribuídos, ou o usuário adicionará na tabela semanal, onde serão chamados de "eventos cotidianos", onde acontecerão toda semana, na mesma hora e no mesmo dia. Independente do tipo de evento que tiver, todos poderão ter uma lista, onde são colocados todos os itens necessários para cumprir determinada tarefa.
 
 Projeto Final - Bernardo e Marcus
+
+Orientador - R. Paskin
