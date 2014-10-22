@@ -49,8 +49,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
-
 # Use debugger
 gem 'debugger', group: [:development, :test]
 gem 'rspec-rails', '3.0.2'

@@ -10,6 +10,7 @@ class EventsController < ApplicationController
   # GET /events/1
   # GET /events/1.json
   def show
+    
   end
 
   # GET /events/new
@@ -25,26 +26,27 @@ class EventsController < ApplicationController
   # POST /events.json
   def create
     @event = Event.new(event_params)
-    @event.user_id = current_user.id
-    respond_to do |format|
-      if @event.save
-        if params[:photos]
-          params[:photos].each { |image|
-            @event.pictures.create(photo: image)
-          }
+      @event.user_id = current_user.id
+      respond_to do |format|
+        if @event.save
+         if params[:photos]
+            params[:photos].each { |image|
+              @event.pictures.create(photo: image)
+            }
+          end
+          format.html { redirect_to @event, notice: 'Event was successfully created.' }
+          format.json { render :show, status: :created, location: @event }
+        else
+          format.html { render :new }
+          format.json { render json: @event.errors, status: :unprocessable_entity }
         end
-        format.html { redirect_to @event, notice: 'Event was successfully created.' }
-        format.json { render :show, status: :created, location: @event }
-      else
-        format.html { render :new }
-        format.json { render json: @event.errors, status: :unprocessable_entity }
       end
-    end
   end
 
   # PATCH/PUT /events/1
   # PATCH/PUT /events/1.json
-  def update
+ 
+def update
     respond_to do |format|
       if @event.update(event_params)
         if params[:photos]
@@ -59,7 +61,14 @@ class EventsController < ApplicationController
         format.json { render json: @event.errors, status: :unprocessable_entity }
       end
     end
+
+    if params[:destroy_images].present?
+      @event.pictures.each{|p| p.destroy}
+    end
   end
+
+
+
 
   # DELETE /events/1
   # DELETE /events/1.json
