@@ -14,14 +14,14 @@
 	$(document).ready(function(){
 		$('#calendar').fullCalendar({
 			weekMode: 'liquid',
-			events: '/events'
-			//events: <% current_user.user_events %>
+			//events: '/events'
+			events: <%user_events%>
 			/*events: function(start,end, callback) {
-    			$.getJSON('/events.json', function(events){
+    			$.getJSON('/events.json', function(event){
         			var eventsToShow = [];
-        			for(var i=0; i<events.length; i++){
-            			if(events[i].user_id == current_user.id){
-                			eventsToShow.push(events[i]);
+        			for(var i=0; i<event.length; i++){
+            			if(event[i].user_id == current_user.id){
+                			eventsToShow.push(event[i]);
             			}
         			}
         			callback(eventsToShow);

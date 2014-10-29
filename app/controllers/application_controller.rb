@@ -13,6 +13,17 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def user_events
+    e = []
+    Events.all.each do |event|
+      if event.user_id == current_user.id
+        e.push(event)
+      end
+    end
+    render :json => e.to_json
+    return e
+  end
+
   def current_user
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
   end
