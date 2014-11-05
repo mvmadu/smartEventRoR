@@ -44,7 +44,7 @@ gem 'json', '~>1.8.1'
 # Use unicorn as the app server
 # gem 'unicorn'
 
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
+gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   match '/logout' => 'sessions#destroy', via: 'get'
   match '/login' => 'sessions#new', via: 'get'
   match '/signup' => 'users#new', via: 'get'
+  match '/events.json' => 'events#index' , via: 'get'
   #match "home" => 'sessions#home' via: 'home'
   root :to => "sessions#new"
   # The priority is based upon order of creation: first created -> highest priority.

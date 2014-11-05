@@ -1,5 +1,4 @@
-<h1>Calendar</h1>
-
+<br>
 <div id='calendar'>
 </div>
 
@@ -14,10 +13,10 @@
 	$(document).ready(function(){
 		$('#calendar').fullCalendar({
 			weekMode: 'liquid',
+			events:'/events'
 		});
 	});
 </script>
 
 <br>
 <%= button_to 'New Event', new_event_path,  :method => :get  %><br>
-<%= button_to 'Log out', "/logout",  :method => :get  %>
