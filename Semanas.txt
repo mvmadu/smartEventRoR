@@ -1,4 +1,28 @@
-﻿Semana 15/10 - 22/9
+﻿Semana  23/9 - 29/9
+O que eu deveria ter feito:
+	Consertar o pipeline, marcar as fotos como verificadas e criar login para os usuarios
+	
+O que eu fiz:
+	Navbar implementado
+
+O que eu devo fazer essa semana:
+	Consertar o pipeline, marcar as fotos como verificadas, tornar a agenda privada e colocar todas funções no navbar.
+____________________________________________________________
+
+Semana  23/9 - 29/9
+O que eu deveria ter feito:
+	Consertar o pipeline, marcar as fotos como verificadas e criar login para os usuarios
+	
+O que eu fiz:
+	Colocamos o bootstrap sem o assets
+
+O que eu devo fazer essa semana:
+	Consertar o pipeline, marcar as fotos como verificadas e tornar a agenda privada
+____________________________________________________________
+
+
+
+Semana 15/10 - 22/9
 O que eu deveria ter feito:
 	Consertar o pipeline, marcar as fotos como verificadas e criar login para os usuarios
 	
