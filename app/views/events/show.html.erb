@@ -24,10 +24,28 @@
 	<% @event.pictures.each do |p| %>
 		<%= image_tag  p.photo.url%><br>
 	<% end %>
+	
+<div class='panel' id = 'nav' >
+	<ul class='list-inline'>
+		<li class='buttons-align'>
+			<span class = 'btn-group pull-right'>
+				<button  class = 'btn btn-primary'>
+					<%= link_to 'Edit', edit_event_path(@event) %>
+				</button>
 
-	<%= button_to 'Edit', edit_event_path(@event) ,  :method => :get %>
-	<%= button_to 'Back', events_path,  :method => :get  %>
-	<%= button_to 'Destroy', "/events/#{@event.id}/destroy", method: :delete, data: { confirm: 'Are you sure?' },  :method => :get  %>
+				<button  class = 'btn btn-primary'>
+					<%= link_to 'Back'%>
+				</button>
+ 
+				<button class = 'btn btn-primary'> 
+					<%= link_to 'Destroy', "/events/#{@event.id}/destroy", method: :delete, data: { confirm: 'Are you sure?' }%>
+				</button>
+			</span>
+		</li>	    
+	</ul>
+</div>
+
 <% else %>
 	Your access to this page has been denied click <%= link_to 'here', events_path %> to be redirected.
 <% end %>
+
