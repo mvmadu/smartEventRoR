@@ -7,6 +7,16 @@ class EventsController < ApplicationController
     @events = Event.all
   end
 
+  def user_events
+    e = []
+    Events.all.each {|event|
+      if event.user_id == current_user.id
+        e.push(event)
+      end
+    }
+    format.json { render :json => e.map, :include => [:id, :title, :description, :user_id, :start, :end, :url]}
+  end
+
   # GET /events/1
   # GET /events/1.json
   def show
