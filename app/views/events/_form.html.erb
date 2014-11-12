@@ -12,7 +12,7 @@
 
     <% @event.pictures.each do |p| %>
       <%= image_tag  p.photo.url %>
-      <%= button_to 'Destroy', "/pictures/#{p.id}/destroy", method: :delete, data: { confirm: 'Are you sure?' },  :method => :get  %><br>
+      <%= link_to 'Destroy', "/pictures/#{p.id}/destroy", method:  :delete, data: { confirm: 'Are you sure?' },  :method => :get  %><br>
     <% end %>
 
     <div class="control-group">

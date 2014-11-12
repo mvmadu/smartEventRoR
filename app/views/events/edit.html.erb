@@ -2,9 +2,22 @@
 <h1>Editing event</h1>
 
 <%= render 'form' %>
+<div class='panel' id = 'nav' >
+	<ul class='list-inline'>
+		<li class='buttons-align'>
+			<span class = 'btn-group pull-right'>
+				<button  class = 'btn btn-primary'>
+					<%= link_to 'Show', @event %>
+				</button>
+					
+				<button  class = 'btn btn-primary'>
+					<%= link_to 'Back', events_path %>
+				</button>
+			</span>
+		</li>	    
+	</ul>
+</div>
 
-<%= link_to 'Show', @event %> |
-<%= link_to 'Back', events_path %>
 <% else %>
 	Your access to this event has been denied click <%= link_to 'here', events_path %> to be redirected.
 <% end %>

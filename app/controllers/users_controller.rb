@@ -19,7 +19,6 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     if @user.save
       UserNotifier.send_signup_email(@user).deliver
-      #UserMailer.welcome_email(@user).deliver
       redirect_to root_url, :notice => "Signed up!"
     else
       render "new"
@@ -27,10 +26,14 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    current_user.destroy
-    respond_to do |format|
-      format.html { redirect_to root_url, notice: 'User was successfully destroyed.' }
-      format.json { head :no_content }
+    if current_user
+      user = current_user
+      session[:user_id] = nil
+      user.destroy
+      respond_to do |format|
+        format.html { redirect_to root_url, notice: 'User was successfully destroyed.' }
+        format.json { head :no_content }
+      end
     end
   end
 end

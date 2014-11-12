@@ -73,7 +73,7 @@ def update
     end
 
     if params[:destroy_images].present?
-      @event.pictures.each{|p| p.destroy}
+      @event.picture.each{|p| p.destroy}
     end
   end
 
